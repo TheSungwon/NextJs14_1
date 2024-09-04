@@ -1,5 +1,5 @@
-const index = () => {
+const Page = () => {
   return <h1>hello NextJs</h1>;
 };
 
-export default index;
+export default Page;

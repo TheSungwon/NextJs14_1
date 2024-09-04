@@ -17,3 +17,11 @@ page.tsx에는 export default ~~ return <h1> ~~
 
 npm run dev
 typescript가 없다면 알아서 설치해주고 app/layout.tsx가 생성됨
+
+layout은 nextjs가 생성,
+nextjs는 프레임워크이기 때문에 내가 작성한 코드를 사용해서 웹을 알아서 만들어 줌
+
+------
+페이지는 app에 폴더생성, page.tsx
+app/about-us/page.tsx
+폴더명이 주소가 됨, page.tsx가 생성되지 않으면 url이 되지 않음
