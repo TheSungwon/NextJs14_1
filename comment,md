@@ -1,0 +1,19 @@
+code .
+//vscode 실행
+
+npm init -y
+//package.json 생성됨
+
+package.json 에서 license는 MIT로 변경
+
+npm install react@latest next@latest react-dom@latest
+
+package.json 에서 scripts의 error 지우고 "dev" : "next dev"
+
+nextjs는 실행할 때 app폴더 안 page라는 파일에서 찾으려고 하기 때문에
+app폴더, page파일(tsx or jsx) 생성 (소문자)
+
+page.tsx에는 export default ~~ return <h1> ~~
+
+npm run dev
+typescript가 없다면 알아서 설치해주고 app/layout.tsx가 생성됨
