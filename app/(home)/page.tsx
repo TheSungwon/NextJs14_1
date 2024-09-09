@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Home",
+  description: "The best movies on the best framework.",
+};
+
 const Page = () => {
   return (
     <div>
