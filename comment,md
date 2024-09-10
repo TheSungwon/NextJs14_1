@@ -28,3 +28,8 @@ app/about-us/page.tsx
 
 ---
 (home) 괄호폴더는 URL에 영향을 주지 않음
+
+--
+nomad moives api
+https://nomad-movies.nomadcoders.workers.dev/
+--
