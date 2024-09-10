@@ -1,29 +1,25 @@
+import { Suspense } from "react";
 import { API_URL } from "../../../(home)/page";
+import MovieInfo from "../../../../components/movie-info";
+import MovieVideos from "../../../../components/movie-videos";
 
-async function getMovie(id: string) {
-  const response = await fetch(`${API_URL}/${id}`);
-  return response.json();
-}
-
-async function getVideos(id: string) {
-  const response = await fetch(`${API_URL}/${id}/videos`);
-  return response.json();
-}
 export default async function MovieDetail({
   params: { id },
 }: {
   params: { id: string };
 }) {
   //   const movie = await getMovie(id);
-  const [movie, video] = await Promise.all([getMovie(id), getVideos(id)]);
 
-  console.log(movie);
-  console.log(video);
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  //   await new Promise((resolve) => setTimeout(resolve, 1000));
   return (
+    // <Suspense>는 await을 해줌
     <>
-      <h1>Movie {movie.title}</h1>
-      <h1>video {video.name}</h1>
+      <Suspense fallback={<h1>loading movie info</h1>}>
+        <MovieInfo id={id} />
+      </Suspense>
+      <Suspense fallback={<h1>loading movie videos</h1>}>
+        <MovieVideos id={id} />
+      </Suspense>
     </>
   );
 }
