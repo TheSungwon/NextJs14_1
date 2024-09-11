@@ -16,7 +16,7 @@ const getMovies = async () => {
 };
 
 const HomePage = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 100));
   const movies = await getMovies();
   return (
     <div className={styles.container}>
