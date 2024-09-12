@@ -13,14 +13,17 @@ export default async function MovieVideos({ id }: { id: string }) {
   return (
     <div className={styles.container}>
       {videos.map((videos) => (
+        <Suspense key={videos.id} fallback={<h1>loading...</h1>}>
         <iframe
+          loading="lazy"
           src={`https://youtube.com/embed/${videos.key}`}
           key={videos.id}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title={videos.name}
-        />
-      ))}
+          />
+          </Suspense>
+          ))}
     </div>
   );
 }
