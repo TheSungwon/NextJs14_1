@@ -34,3 +34,12 @@ nomad moives api
 https://nomad-movies.nomadcoders.workers.dev/
 --
 npm install --save-dev typescript
+--
+
+prisma
+planetscale
+tailwind
+cloudflare workers durable object
+serverless chat
+next auth
+file upload
